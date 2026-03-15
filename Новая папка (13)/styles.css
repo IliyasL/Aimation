@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.rotate {
+    transform: rotate(45deg);
+    background-color: #e74c3c;
+}
+
+.scale {
+    transform: scale(1.5);
+    background-color: #3498db;
+}
+
+.translate {
+    transform: translateX(50px);
+    background-color: #2ecc71;
+}
+
+.skew {
+    transform: skewY(20deg);
+    background-color: #f1c40f;
+}
+
+.box1 {
+    background-color: #9b59b6;
+    width: 150px;
+    height: 150px;
+    transition: background-color 1s, transform 1s;
+}
+
+.box1:hover {
+    background-color: #e74c3c;
+    transform: rotate(360deg);
+}
+
+.container1 {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    animation: complexMove 4s ease-in-out 1s infinite;
+}
+
+@keyframes complexMove {
+    0% {
+        transform: translateX(0);
+        background-color: #3498db;
+    }
+    50% {
+        transform: translateX(100px);
+        background-color: #e74c3c;
+    }
+    100% {
+        transform: translateX(0);
+        background-color: #3498db;
+    }
+}
